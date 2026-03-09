@@ -1,0 +1,62 @@
+{
+  "abstract": {
+    "name": "abstract",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "graphic": {
+    "name": "graphic",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "landscape": {
+    "name": "landscape",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "still-life": {
+    "name": "still-life",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "landscape-1": {
+    "name": "Türkiye hot summer evening",
+    "size": "40sm x 50sm",
+    "materials": "acrylic on canvas",
+    "isSold": false
+  },
+  "landscape-2": {
+    "name": "Türkiye summer evening",
+    "size": "40sm x 50sm",
+    "materials": "acrylic on canvas",
+    "isSold": false
+  },
+  "landscape-3": {
+    "name": "North April",
+    "size": "20sm x 30sm",
+    "materials": "oil on carton",
+    "isSold": true
+  },
+  "landscape-5": {
+    "name": "landscape-5",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "landscape-6": {
+    "name": "landscape-6",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "landscape-7": {
+    "name": "landscape-7",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  }
+}

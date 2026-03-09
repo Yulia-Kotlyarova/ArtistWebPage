@@ -1,0 +1,1 @@
+export {WatermarkedCanvasImage} from './watermark';
