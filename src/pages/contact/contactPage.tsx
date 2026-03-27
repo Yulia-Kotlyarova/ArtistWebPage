@@ -1,3 +1,5 @@
+import {ActionLink} from '@/shared/link';
+
 const EMAIL_TO = "you@domain.com";
 const SUBJECT = "Покупка картины / Вопрос";
 
@@ -57,9 +59,11 @@ export function ContactPage() {
 
 					<section className="my-8 border bg-background p-6 sm:p-8">
 						<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-							<a href={mailto} className="button-link">
-								Написать
-							</a>
+							<ActionLink variant="button">
+								<a href={mailto} className="button-link">
+									Написать
+								</a>
+							</ActionLink>
 
 							<p className="caption sm:text-right">
 								Письмо будет отправлено из вашего почтового клиента.

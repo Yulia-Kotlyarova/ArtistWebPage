@@ -1,0 +1,3 @@
+.subtitle {
+    @apply text-xs uppercase tracking-widest text-muted-foreground;
+}

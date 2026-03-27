@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom';
 import {Camera, Mail} from 'lucide-react';
+import {Subtitle} from '@/shared/subtitle';
+import {ActionLink} from '@/shared/link';
 
 export function Footer() {
 	return (
@@ -24,17 +26,17 @@ export function Footer() {
 					<div className="grid gap-10 sm:grid-cols-3 md:col-span-7">
 
 						<div className="space-y-3">
-							<p className="footer-title">Навигация</p>
+							<Subtitle as={"p"}>Навигация</Subtitle>
 
 							<ul className="space-y-2">
-								<li><Link className="footer-link" to="/">Главная</Link></li>
-								<li><Link className="footer-link" to="/gallery">Галерея</Link></li>
-								<li><Link className="footer-link" to="/about">Обо мне</Link></li>
+								<li><ActionLink><Link to="/">Главная</Link></ActionLink></li>
+								<li><ActionLink><Link to="/gallery">Галерея</Link></ActionLink></li>
+								<li><ActionLink><Link to="/about">Обо мне</Link></ActionLink></li>
 							</ul>
 						</div>
 
 						<div className="space-y-3">
-							<p className="footer-title">Контакты</p>
+							<Subtitle as={"p"}>Контакты</Subtitle>
 
 							<ul className="space-y-2">
 								<li>
@@ -43,7 +45,7 @@ export function Footer() {
 										aria-label="Email"
 										className="text-muted-foreground transition-opacity hover:opacity-70"
 									>
-										<Mail className="mx-auto rounded-md p-1 text-muted-foreground transition hover:bg-muted" strokeWidth={1.25} size={36}/>
+										<Mail className="rounded-md p-1 text-muted-foreground transition hover:bg-muted" strokeWidth={1.25} size={36}/>
 									</a>
 								</li>
 
@@ -55,18 +57,17 @@ export function Footer() {
 										aria-label="Instagram"
 										className="text-muted-foreground transition-opacity hover:opacity-70"
 									>
-										<Camera className="mx-auto rounded-md p-1 text-muted-foreground transition hover:bg-muted" strokeWidth={1.25}  size={36}/>
+										<Camera className="rounded-md p-1 text-muted-foreground transition hover:bg-muted" strokeWidth={1.25}  size={36}/>
 									</a>
 								</li>
 							</ul>
 						</div>
 
 						<div className="space-y-3">
-							<p className="footer-title">Другое</p>
+							<Subtitle as={"p"}>Другое</Subtitle>
 
 							<ul className="space-y-2">
-								<li><a className="footer-link" href="#contact">Написать</a></li>
-								<li><a className="footer-link" href="#">Политика</a></li>
+								<li><ActionLink><Link to="/contact">Написать</Link></ActionLink></li>
 							</ul>
 						</div>
 
