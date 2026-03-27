@@ -1,1 +1,4 @@
-export {ImagePlaceholder, type ImagePlaceholderProps} from './image-placeholder';
+export {
+  ImagePlaceholder,
+  type ImagePlaceholderProps,
+} from "./image-placeholder";

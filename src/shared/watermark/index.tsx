@@ -1,1 +1,1 @@
-export {WatermarkedCanvasImage} from './watermark';
+export { WatermarkedCanvasImage } from "./watermark";

@@ -1,1 +1,1 @@
-export {ContactPage} from './contactPage.tsx'
+export { ContactPage } from "./contactPage.tsx";

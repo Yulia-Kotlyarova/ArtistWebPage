@@ -21,7 +21,9 @@ function readExistingJson(filePath) {
   try {
     return JSON.parse(fs.readFileSync(filePath, "utf-8"));
   } catch {
-    console.warn("⚠️ images.json exists but could not be parsed, starting fresh");
+    console.warn(
+      "⚠️ images.json exists but could not be parsed, starting fresh",
+    );
     return {};
   }
 }
@@ -81,7 +83,9 @@ const result = { ...existingData };
 const allFiles = walk(IMAGES_DIR);
 
 // 1) старый кейс cover-full.jpeg
-const coverFiles = allFiles.filter((f) => path.basename(f) === "cover-full.jpeg");
+const coverFiles = allFiles.filter(
+  (f) => path.basename(f) === "cover-full.jpeg",
+);
 
 // 2) новый кейс: <folder>/<folder>-*.{jpg,jpeg,png,webp}
 // Чтобы корректно выбрать один файл на папку, сначала сгруппируем файлы по родительской папке
@@ -101,7 +105,9 @@ for (const filePath of coverFiles) {
 
   const generated = { name, size: "", materials: "", isSold: true };
 
-  result[name] = result[name] ? mergeIfEmpty(result[name], generated) : generated;
+  result[name] = result[name]
+    ? mergeIfEmpty(result[name], generated)
+    : generated;
 }
 
 // --- обработка нового правила (имя файла начинается с имени папки) ---
@@ -119,7 +125,9 @@ for (const [dir, files] of filesByParentDir.entries()) {
 
   const generated = { name, size: "", materials: "", isSold: true };
 
-  result[name] = result[name] ? mergeIfEmpty(result[name], generated) : generated;
+  result[name] = result[name]
+    ? mergeIfEmpty(result[name], generated)
+    : generated;
 }
 
 fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });

@@ -1,1 +1,5 @@
-export {ArtworkCard, type ArtworkCardProps, type ArtworkCardList} from './ArtworkCard.tsx'
+export {
+  ArtworkCard,
+  type ArtworkCardProps,
+  type ArtworkCardList,
+} from "./ArtworkCard.tsx";

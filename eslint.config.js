@@ -1,15 +1,15 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import importPlugin from 'eslint-plugin-import'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import importPlugin from "eslint-plugin-import";
+import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
@@ -24,34 +24,34 @@ export default defineConfig([
       globals: globals.browser,
     },
     settings: {
-      'import/resolver': {
+      "import/resolver": {
         typescript: {
-          project: './tsconfig.json',
+          project: "./tsconfig.json",
         },
       },
     },
     rules: {
-      'no-restricted-imports': [
-        'error',
+      "no-restricted-imports": [
+        "error",
         {
           patterns: [
             {
-              group: ['../*', '../../*', '../../../*', '../../../../*'],
-              message: 'Use alias import instead of parent relative import.',
+              group: ["../*", "../../*", "../../../*", "../../../../*"],
+              message: "Use alias import instead of parent relative import.",
             },
             {
               group: [
-                '@/app/*/*',
-                '@/pages/*/*',
-                '@/widgets/*/*',
-                '@/features/*/*',
-                '@/entities/*/*',
+                "@/app/*/*",
+                "@/pages/*/*",
+                "@/widgets/*/*",
+                "@/features/*/*",
+                "@/entities/*/*",
               ],
-              message: 'Use slice public API.',
+              message: "Use slice public API.",
             },
           ],
         },
       ],
     },
   },
-])
+]);

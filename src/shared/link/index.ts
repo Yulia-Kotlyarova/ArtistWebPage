@@ -1,1 +1,1 @@
-export {ActionLink} from './link';
+export { ActionLink } from "./link";

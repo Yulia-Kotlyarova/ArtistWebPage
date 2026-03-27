@@ -1,1 +1,1 @@
-export {NavItem} from './navbar';
+export { NavItem } from "./navbar";

@@ -1,1 +1,1 @@
-export {GallerySwiper} from "./gallery-swiper";
+export { GallerySwiper } from "./gallery-swiper";
