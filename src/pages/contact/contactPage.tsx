@@ -1,6 +1,6 @@
+import { env } from "@/shared/config/env";
 import { ActionLink } from "@/shared/link";
 
-const EMAIL_TO = "you@domain.com";
 const SUBJECT = "Покупка картины / Вопрос";
 
 export function ContactPage() {
@@ -23,7 +23,7 @@ export function ContactPage() {
 Спасибо!
 `.trim();
 
-  const mailto = `mailto:${EMAIL_TO}?subject=${encodeURIComponent(
+  const mailto = `mailto:${env.contactEmail}?subject=${encodeURIComponent(
     SUBJECT,
   )}&body=${encodeURIComponent(body)}`;
 
@@ -74,7 +74,7 @@ export function ContactPage() {
           </section>
           <p className="caption">
             Если почта не открылась, напишите напрямую:{" "}
-            <a href="mailto:you@domain.com">you@domain.com</a>
+            {env.contactEmail}
           </p>
         </div>
       </section>
