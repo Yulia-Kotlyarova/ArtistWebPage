@@ -36,7 +36,7 @@ export function GallerySwiper() {
       if (!imageId || !slugKey || !slug) return;
       if (slugKey !== slug) return;
 
-      const { name, size, materials, isSold } = picturesInfo[picId];
+      const { name, size, materials, isSold } = picturesInfo[picId as keyof typeof picturesInfo];
 
       result.push({
         src: `/images/${slug}/${slug}-${imageId}/${slug}-${imageId}-full.jpeg`,
@@ -45,7 +45,7 @@ export function GallerySwiper() {
         size,
         materials,
         isSold,
-        picId: picId,
+        picId,
       });
     });
 
@@ -87,15 +87,14 @@ export function GallerySwiper() {
           direction="vertical"
           keyboard={{ enabled: true }}
           thumbs={{ swiper: safeThumbs }}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
+          navigation={{ enabled: true }}
           onBeforeInit={(swiper) => {
-            // @ts-expect-error
-            swiper.params.navigation.prevEl = prevRef.current;
-            // @ts-expect-error
-            swiper.params.navigation.nextEl = nextRef.current;
+            const navigation = swiper.params.navigation;
+
+            if (navigation && typeof navigation !== "boolean") {
+              navigation.prevEl = prevRef.current;
+              navigation.nextEl = nextRef.current;
+            }
           }}
           style={{ height: "70vh" }}
           className="w-full"
