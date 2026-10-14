@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ImagePlaceholder } from "@/shared/image-placeholder";
 import { WatermarkedCanvasImage } from "@/shared/watermark";
 import { cn } from "@/shared/lib/utils.ts";
+import { env } from "@/shared/config/env";
 
 export type ArtworkCardProps = {
   title: string;
@@ -44,7 +45,7 @@ export function ArtworkCard({
           onLoad={setLoaded}
           className="h-[70vh] w-full object-contain"
           watermark={{
-            text: "Yulia • example.com",
+            text: `Yulia • ${env.contactEmail}`,
           }}
         />
       )}

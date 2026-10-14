@@ -1,3 +1,5 @@
+import { env } from "@/shared/config/env";
+
 export function AboutPage() {
   return (
     <section>
@@ -9,7 +11,7 @@ export function AboutPage() {
         <p>Текст…</p>
 
         <h2>Контакты</h2>
-        <p className="muted">email@example.com</p>
+        <p className="muted">{env.contactEmail}</p>
       </div>
     </section>
   );
