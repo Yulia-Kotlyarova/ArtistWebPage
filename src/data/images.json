@@ -58,5 +58,23 @@
     "size": "",
     "materials": "",
     "isSold": true
+  },
+  "graphic-1": {
+    "name": "graphic-1",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "abstract-1": {
+    "name": "abstract-1",
+    "size": "",
+    "materials": "",
+    "isSold": true
+  },
+  "abstract-2": {
+    "name": "abstract-2",
+    "size": "",
+    "materials": "",
+    "isSold": true
   }
 }

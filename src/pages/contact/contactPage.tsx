@@ -1,5 +1,6 @@
 import { env } from "@/shared/config/env";
 import { ActionLink } from "@/shared/link";
+import {ArtworkCard} from '@/entities/artwork';
 
 const SUBJECT = "Покупка картины / Вопрос";
 
@@ -32,11 +33,11 @@ export function ContactPage() {
       <section className="grid gap-8 lg:grid-cols-12 lg:items-start">
         <div className="lg:col-span-5">
           <div className="border bg-background">
-            <img
-              src="/images/contact-art/contacr-full.jpeg"
+            <ArtworkCard
+              src="/images/contact-art/contact-full.jpeg"
               alt="Artwork fragment"
-              className="h-[280px] w-full object-cover sm:h-[360px] lg:h-[520px]"
-              loading="lazy"
+              swiperClassName="h-[280px] w-full object-cover sm:h-[360px] lg:h-[520px]"
+              title=""
             />
           </div>
         </div>
